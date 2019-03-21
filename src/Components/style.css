@@ -1,0 +1,103 @@
+.body {
+    background-color: #77C2FC
+}
+
+.character-container {
+    background-color: rgba(255, 255, 255, 0.651);
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5rem;
+    padding: 3rem;
+    height: 100%;
+    border-radius: 2rem
+}
+
+.character-view {
+    /* background-image: url('https://i.pinimg.com/originals/ed/45/44/ed4544b623ae502d0a196c522976c658.jpg');
+    background-size: 100vw; */
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.specific-view {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.back-button {
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    position: absolute;
+    left: 3rem;
+    top: 3rem;
+}
+
+.edit-button {
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    position: absolute;
+    right: 3rem;
+    top: 3rem;
+}
+
+h2 {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0
+}
+
+.All-Characters-Header {
+    position: absolute;
+}
+
+.edit-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 70vh;
+    width: 70rem;
+    background-color: rgba(225, 225, 225, 0.932);
+    z-index: 99;
+    position: absolute;
+    border-radius: 5rem    
+}
+
+.update-content {
+    height: 2rem;
+    margin: 1rem;
+    border-radius: 1rem;
+    text-align: center
+}
+
+.update-button {
+    background-color: #77C2FC;
+    height: 3rem;
+    width: 20rem;
+    border-radius: 1rem;
+    bottom: 5rem;
+    left: 25rem;
+}
+
+.delete-button {
+    background-color: rgb(252, 119, 119);
+    height: 3rem;
+    width: 20rem;
+    border-radius: 1rem;
+    bottom: 1rem;
+    left: 25rem;
+    margin: 1rem;
+}

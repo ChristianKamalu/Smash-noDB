@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import Smash from './Components/Smash'
+import Smash from './Components/Smash';
 
 class App extends Component {
   render() {
     return (
-      <div>
+      <div className={'body'}>
         <Smash />
       </div>
     );

@@ -6,10 +6,11 @@ function Toggle (props) {
     return props.toggle ? 
         <AllChar 
             characters={props.characters}
-            toggle={props.toggle}/> : 
+            toggleView={props.toggleView}
+            /> : 
         <SpecificChar 
             specificChar={props.specificChar}
-            toggle={props.toggle}/>
+            toggleView={props.toggleView}/>
 }
 
 export default Toggle

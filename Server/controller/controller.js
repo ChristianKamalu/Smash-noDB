@@ -1,10 +1,10 @@
-let i = 1;
+let id = 1;
 let characters = [
     {
         debut: 1981,
         id: 2,
-        image_path: "mario.png",
-        moves: "Super Jump Punch","Fireball","Mario Tornado","Cape",
+        image_path: "https://upload.wikimedia.org/wikipedia/en/thumb/a/a9/MarioNSMBUDeluxe.png/220px-MarioNSMBUDeluxe.png",
+        moves: ["Super Jump Punch","Fireball","Mario Tornado","Cape"],
         name: "Mario",
         tier: 'E',
         universe: "Mario",
@@ -13,8 +13,8 @@ let characters = [
       {
         debut: 1983,
         id: 3,
-        image_path: "luigi.png",
-        moves: "Super Jump Punch","Fireball","Luigi Cyclone","Throat Thrust","Green Missile",
+        image_path: "https://upload.wikimedia.org/wikipedia/en/thumb/f/f1/LuigiNSMBW.png/220px-LuigiNSMBW.png",
+        moves: ["Super Jump Punch","Fireball","Luigi Cyclone","Throat Thrust","Green Missile"],
         name: "Luigi",
         tier: "D",
         universe: "Mario",
@@ -23,8 +23,8 @@ let characters = [
       {
         debut: 1990,
         id: 4,
-        image_path: "yoshi.png",
-        moves: "Egg Lay","Egg Throw","Egg Roll","Yoshi Bomb",
+        image_path: "https://upload.wikimedia.org/wikipedia/en/thumb/d/d9/YoshiMarioParty10.png/220px-YoshiMarioParty10.png",
+        moves: ["Egg Lay","Egg Throw","Egg Roll","Yoshi Bomb"],
         name: "Yoshi",
         tier: "D",
         universe: "Yoshi",
@@ -33,9 +33,11 @@ let characters = [
 ]
 
 module.exports = {
-    get:,
-    search:,
-    create:,
-    update:,
-    delete:
+    get: (req, res) => {
+      res.send(characters);
+    }
+    // search:
+    // create:
+    // update:
+    // delete:
 }
