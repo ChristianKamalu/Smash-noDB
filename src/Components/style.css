@@ -1,12 +1,21 @@
-.body {
-    background-color: #77C2FC
+/* .body {
+    background: url('https://stmed.net/sites/default/files/styles/1920x1200/public/super-smash-bros.-hd-wallpapers-33732-3073557.jpg?itok=OMVW00-O');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: fixed
+} */
+
+.background {
+
 }
 
 .character-container {
+    width: 30rem;
     background-color: rgba(255, 255, 255, 0.651);
     border: 1px solid black;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
     margin: 5rem;
     padding: 3rem;
@@ -15,8 +24,11 @@
 }
 
 .character-view {
-    /* background-image: url('https://i.pinimg.com/originals/ed/45/44/ed4544b623ae502d0a196c522976c658.jpg');
-    background-size: 100vw; */
+    background: url('https://stmed.net/sites/default/files/styles/1920x1200/public/super-smash-bros.-hd-wallpapers-33732-3073557.jpg?itok=OMVW00-O');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+    background-position-y: -10rem;
     height: 100%;
     width: 100%;
     display: flex;
@@ -24,13 +36,69 @@
     justify-content: space-evenly;
 }
 
+.create-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 70vh;
+    width: 70rem;
+    background-color: rgba(225, 225, 225, 0.932);
+    z-index: 9999;
+    position: fixed;
+    top: 5rem;
+    border-radius: 5rem    
+}
+
 .specific-view {
+    background: url('http://assets1.ignimgs.com/2018/03/08/screen-shot-2018-03-08-at-24144-pm-2-1520550781828_1280w.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
     height: 100vh;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     position: relative;
+}
+
+.stats-view-box {
+    background-color: rgba(225, 225, 225, 0.678);
+    border-radius: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem
+}
+
+h2 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 1rem;
+    padding: 0
+}
+
+.All-Characters-Header {
+    margin: 5rem 0 0 0
+}
+
+.edit-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 70vh;
+    width: 70rem;
+    background-color: rgba(225, 225, 225, 0.932);
+    z-index: 9999;
+    position: absolute;
+    border-radius: 5rem    
 }
 
 .back-button {
@@ -49,31 +117,6 @@
     position: absolute;
     right: 3rem;
     top: 3rem;
-}
-
-h2 {
-    display: flex;
-    align-items: center;
-    margin: 0;
-    padding: 0
-}
-
-.All-Characters-Header {
-    position: absolute;
-}
-
-.edit-box {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    height: 70vh;
-    width: 70rem;
-    background-color: rgba(225, 225, 225, 0.932);
-    z-index: 99;
-    position: absolute;
-    border-radius: 5rem    
 }
 
 .update-content {
@@ -100,4 +143,26 @@ h2 {
     bottom: 1rem;
     left: 25rem;
     margin: 1rem;
+}
+
+.create-button {
+    background-color: rgba(119, 194, 252, 0);
+    color: white;
+    height: 3rem;
+    width: 30vw;
+    border-radius: 1rem;
+    position: fixed;
+    right: 1rem;
+    top: 1rem
+}
+
+.search-bar {
+    background-color: rgba(119, 194, 252, 0);
+    color: white;
+    height: 2.6rem;
+    width: 30vw;
+    border-radius: 1rem;
+    position: fixed;
+    left: 1rem;
+    top: 1rem
 }

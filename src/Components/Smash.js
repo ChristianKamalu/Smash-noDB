@@ -8,24 +8,41 @@ class Smash extends Component {
 
         this.state = {
             characters: [],
-            specificChar: {
-                debut: 1981,
-                id: 2,
-                image_path: "https://upload.wikimedia.org/wikipedia/en/thumb/a/a9/MarioNSMBUDeluxe.png/220px-MarioNSMBUDeluxe.png",
-                moves: ["Super Jump Punch","Fireball","Mario Tornado","Cape"],
-                name: "Mario",
-                tier: 'E',
-                universe: "Mario",
-                weight: 100
-              },
-            toggle: false
+            specificChar: [],
+            toggle: true
         }
     }
 
+    deleteCharacter = id => {
+        axios.delete(`/api/SmashChars/${id}`)
+            .then(res => {
+                this.setState({
+                    characters: res.data
+                })
+            }).catch(err => console.log(err))
+    }
+
+    createCharacter = character => {
+        axios.post('/api/SmashChars', character)
+            .then(res => {
+                this.setState({
+                    characters: res.data
+                })
+            }).catch(err => console.log(err))
+    }
+
+    updateCharacter = character => {
+        axios.put(`/api/SmashChars/${character.id}`, character).then(res => {
+            this.setState({
+                characters: res.data
+            })
+            // this.toggleView(res.data.id);
+        }).catch(err => console.log(err))
+    }
     
     handleCharacterClick = (id) => {
-        let character = this.state.characters.find(character => character.id === id)
-        
+        let specific = this.state.characters.find(character => character.id === id)
+        let character = Object.assign({}, specific)
         this.setState({
             specificChar: character
         })
@@ -33,7 +50,8 @@ class Smash extends Component {
     
     toggleView = (id) => {        
         this.state.toggle ? this.setState({
-            toggle: false
+            toggle: false,
+            edit: false
         }) : this.setState({
             toggle: true
         });
@@ -48,14 +66,20 @@ class Smash extends Component {
                     characters: res.data
                 })
             })
+            .catch(err => {
+                console.log("Houston, we have a proplem", err)
+            })
     }
 
     render() {
-        return (
+        return(
             <div className={'background'}>
                 <ViewToggle 
+                    deleteCharacter={this.deleteCharacter}
+                    createCharacter={this.createCharacter}
                     characters={this.state.characters}
                     specificChar={this.state.specificChar}
+                    updateCharacter={this.updateCharacter}
                     toggleView={this.toggleView}
                     toggle={this.state.toggle}
                 />

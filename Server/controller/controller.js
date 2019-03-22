@@ -1,4 +1,4 @@
-let id = 1;
+let id = 5;
 let characters = [
     {
         debut: 1981,
@@ -35,9 +35,54 @@ let characters = [
 module.exports = {
     get: (req, res) => {
       res.send(characters);
-    }
+    },
     // search:
-    // create:
-    // update:
-    // delete:
+    create: (req, res) => {
+      id++;
+      let { name, image_path, moves, universe, weight } = req.body;
+
+      let newCharacter = !name && !image_path ? (
+      {
+        id: id,
+        name: 'Dwayne "The Rock" Johnson',
+        image_path: "http://atlantablackstar.com/wp-content/uploads/2015/06/The-Rock-4.png",
+        moves: "Destroy",
+        universe: "Titan Games",
+        weight: 991
+      }
+      ) : (
+      {
+        id: id,
+        image_path: image_path,
+        moves: moves,
+        name: name,
+        universe: universe,
+        weight: weight * 1
+      })
+      characters.push(newCharacter);
+      res.send(characters)
+    },
+    update: (req, res) => {
+      let { name, image_path, moves, universe, weight, id } = req.body;
+
+      let index = characters.findIndex(character => Number(character.id) === Number(req.params.id))
+      let character = [];
+      character.push(characters[index])
+
+      let updatedCharacter = {
+        id: id,
+        image_path: image_path ? image_path : character.image_path,
+        moves: moves ? moves : character.moves,
+        name: name ? name : character.name,
+        universe: universe ? universe : character.universe,
+        weight: weight ? weight * 1 : character.weight
+      }
+      characters.splice(index, 1, updatedCharacter)
+      res.send(characters)
+    },
+    delete: (req, res) => {
+      let index = characters.findIndex(character => Number(character.id) === Number(req.params.id))
+      characters.splice(index, 1)
+      res.send(characters)
+    }
 }

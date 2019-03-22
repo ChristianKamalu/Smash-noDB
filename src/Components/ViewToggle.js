@@ -5,11 +5,15 @@ import SpecificChar from './SpecificChar'
 function Toggle (props) {
     return props.toggle ? 
         <AllChar 
+            createCharacter={props.createCharacter}
+            specificChar={props.specificChar}
             characters={props.characters}
             toggleView={props.toggleView}
             /> : 
         <SpecificChar 
+            deleteCharacter={props.deleteCharacter}
             specificChar={props.specificChar}
+            updateCharacter={props.updateCharacter}
             toggleView={props.toggleView}/>
 }
 
