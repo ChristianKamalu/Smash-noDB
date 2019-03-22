@@ -13,7 +13,7 @@ let characters = [
       {
         debut: 1983,
         id: 3,
-        image_path: "https://upload.wikimedia.org/wikipedia/en/thumb/f/f1/LuigiNSMBW.png/220px-LuigiNSMBW.png",
+        image_path: "https://www.ssbwiki.com/images/thumb/6/67/PMLuigiAlt.png/200px-PMLuigiAlt.png",
         moves: ["Super Jump Punch","Fireball","Luigi Cyclone","Throat Thrust","Green Missile"],
         name: "Luigi",
         tier: "D",

@@ -48,7 +48,7 @@ class AllChar extends Component {
         return !this.state.create ? (
             <div className={'character-view'}>
                 <button className={'create-button'} onClick={this.toggleCreate}><h3>CREATE CHARACTER</h3></button>
-                <input className={'search-bar'} />
+                <input className={'search-bar'} placeholder={'SEARCH'} onChange={e => this.props.componentDidMount(e.target.value)}/>
                 <img className={'All-Characters-Header'} src={'https://fontmeme.com/permalink/190322/5e0c3ba9f725e06348fec118fab97f4c.png'}/>
                 <div className={'character-view'}>
                     {this.props.characters.map((character) => {
@@ -60,7 +60,7 @@ class AllChar extends Component {
         ) : (
             <div className={'character-view'}>
                 <button className={'create-button'} onClick={this.toggleCreate}><h3>CREATE CHARACTER</h3></button>
-                <input className={'search-bar'} />
+                <input className={'search-bar'} placeholder={'SEARCH'}/>
                 <img className={'All-Characters-Header'} src={'https://fontmeme.com/permalink/190322/5e0c3ba9f725e06348fec118fab97f4c.png'}/>
                 <div className={'character-view'}>
                     {this.props.characters.map((character) => {

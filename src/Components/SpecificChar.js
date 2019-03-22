@@ -52,7 +52,7 @@ class SpecificChar extends Component {
             <div className={'specific-view'}>
                 <button className={'back-button'} onClick={this.props.toggleView}><img src={'https://cdn2.iconfinder.com/data/icons/arrows-1-2/416/Arrow_Left3-512.png'} alt='left arrow' width='30'/></button>
                 <button className={'edit-button'} onClick={this.toggleEdit}>EDIT</button>
-                <h1>{this.props.specificChar.name}</h1>
+                <h1 className={'name'}>{this.props.specificChar.name}</h1>
                 <img src={this.props.specificChar.image_path} alt={this.props.specificChar.name} width={'300'} style={{ marginBottom: '3rem'}}/>
                 <div className={'stats-view-box'}>
                     <h2>{`Universe: ${this.props.specificChar.universe}`}</h2>
@@ -66,9 +66,11 @@ class SpecificChar extends Component {
                 <button className={'edit-button'} onClick={this.toggleEdit}>EDIT</button>
                 <h1>{this.props.specificChar.name}</h1>
                 <img src={this.props.specificChar.image_path} alt={this.props.specificChar.name} width={'300'} style={{ marginBottom: '3rem'}}/>
-                <h2>{`Universe: ${this.props.specificChar.universe}`}</h2>
-                <h2>{`Moves: ${JSON.stringify(this.props.specificChar.moves)}`}</h2>
-                <h2>{`Weight: ${this.props.specificChar.weight}`}</h2>
+                <div className={'stats-view-box'}>
+                    <h2>{`Universe: ${this.props.specificChar.universe}`}</h2>
+                    <h2>{`Moves: ${JSON.stringify(this.props.specificChar.moves)}`}</h2>
+                    <h2>{`Weight: ${this.props.specificChar.weight}`}</h2>
+                </div>
 
                 <div className={'edit-box'}>
                     <input className={'update-content'} type='text' name='name' placeholder='name' onChange={e => this.handleChange(e.target)}/>
