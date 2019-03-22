@@ -36,7 +36,13 @@ module.exports = {
     get: (req, res) => {
       res.send(characters);
     },
-    // search:
+    search: (req, res) => {
+      let { search } = req.query;
+      let searchCharacters = characters.filter(character => {
+        return character.name.includes(search)
+      })
+      res.send(searchCharacters)
+    },
     create: (req, res) => {
       id++;
       let { name, image_path, moves, universe, weight } = req.body;

@@ -26,7 +26,8 @@
 .character-view {
     background: url('https://stmed.net/sites/default/files/styles/1920x1200/public/super-smash-bros.-hd-wallpapers-33732-3073557.jpg?itok=OMVW00-O');
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-position: right;
+    /* background-size: 100%; */
     background-attachment: fixed;
     background-position-y: -10rem;
     height: 100%;
@@ -53,7 +54,9 @@
 
 .specific-view {
     background: url('http://assets1.ignimgs.com/2018/03/08/screen-shot-2018-03-08-at-24144-pm-2-1520550781828_1280w.png');
+    background-color: #000000;
     background-repeat: no-repeat;
+    background-position: right;
     background-size: 100%;
     background-attachment: fixed;
     height: 100vh;

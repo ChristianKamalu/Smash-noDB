@@ -5,7 +5,7 @@ import SpecificChar from './SpecificChar'
 function Toggle (props) {
     return props.toggle ? 
         <AllChar 
-            componentDidMount={props.componentDidMount}
+            searchCharacters={props.searchCharacters}
             createCharacter={props.createCharacter}
             specificChar={props.specificChar}
             characters={props.characters}

@@ -23,7 +23,7 @@ class Smash extends Component {
     }
 
     searchCharacters = (input) => {
-        axios.get(`/api/SmashChars/${input}`)
+        axios.get(`/api/SmashChars/?search=${input}`)
             .then(res => {
                 this.setState({
                     characters: res.data
@@ -84,7 +84,7 @@ class Smash extends Component {
         return(
             <div className={'background'}>
                 <ViewToggle 
-                    componentDidMount={this.componentDidMount}
+                    searchCharacters={this.searchCharacters}
                     deleteCharacter={this.deleteCharacter}
                     createCharacter={this.createCharacter}
                     characters={this.state.characters}
