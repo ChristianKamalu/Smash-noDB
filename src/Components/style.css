@@ -1,12 +1,9 @@
-/* .body {
+body {
     background: url('https://stmed.net/sites/default/files/styles/1920x1200/public/super-smash-bros.-hd-wallpapers-33732-3073557.jpg?itok=OMVW00-O');
     background-repeat: no-repeat;
-    background-size: 100%;
-    position: fixed
-} */
-
-.background {
-
+    background-position: right;
+    background-attachment: fixed;
+    background-position-y: -10rem;
 }
 
 .character-container {
@@ -24,12 +21,6 @@
 }
 
 .character-view {
-    background: url('https://stmed.net/sites/default/files/styles/1920x1200/public/super-smash-bros.-hd-wallpapers-33732-3073557.jpg?itok=OMVW00-O');
-    background-repeat: no-repeat;
-    background-position: right;
-    /* background-size: 100%; */
-    background-attachment: fixed;
-    background-position-y: -10rem;
     height: 100%;
     width: 100%;
     display: flex;

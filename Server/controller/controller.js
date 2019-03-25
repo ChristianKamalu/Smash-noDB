@@ -1,4 +1,4 @@
-let id = 9;
+let id = 13;
 let characters = [
     {
         debut: 1981,
@@ -79,6 +79,56 @@ let characters = [
         tier: "D",
         universe: "Legend of Zelda",
         weight: 'Super Heavy'
+      },
+      {
+        debut: 1990,
+        id: 10,
+        image_path: "https://www.ssbwiki.com/images/thumb/6/6a/Jigglypuff_SSBU.png/250px-Jigglypuff_SSBU.png",
+        moves: ["Sing, Slap, Sleep"],
+        name: "Jigglypuff",
+        tier: "D",
+        universe: "Pokemon",
+        weight: 'light'
+      },
+      {
+        debut: 1990,
+        id: 11,
+        image_path: "https://vignette.wikia.nocookie.net/kirby/images/2/2d/SSU_Kirby_artwork.png/revision/latest?cb=20180612173614&path-prefix=en",
+        moves: ["Inhale, Hammer Flip, Final Cutter, Stone"],
+        name: "Kirby",
+        tier: "D",
+        universe: "Kirby",
+        weight: 'light'
+      },
+      {
+        debut: 1990,
+        id: 12,
+        image_path: "https://vignette.wikia.nocookie.net/the-zoopur-smesch-bruddas-bizarre-adventures-xyz/images/3/34/SSB4_Dark_Link.png/revision/latest?cb=20180722214333",
+        moves: ["Bow and arrows, Boomerang, Spin Attack, Bomb"],
+        name: "Link",
+        tier: "D",
+        universe: "Legend of Zelda",
+        weight: 'heavy'
+      },
+      {
+        debut: 1990,
+        id: 13,
+        image_path: "https://img.rankedboost.com/wp-content/plugins/super-smash-bros-ultimate/assets/character-images-main/Young_Link_SSBU.png",
+        moves: ["Bow and arrows, Boomerang, Spin Attack, Bomb"],
+        name: "Young Link",
+        tier: "D",
+        universe: "Legend of Zelda",
+        weight: 'light'
+      },
+      {
+        debut: 1990,
+        id: 14,
+        image_path: "https://vignette.wikia.nocookie.net/supersmashbrosfanon/images/5/52/CrueltyToonLink.png/revision/latest?cb=20160521191516",
+        moves: ["Bow and arrows, Boomerang, Spin Attack, Bomb"],
+        name: "Toon Link",
+        tier: "D",
+        universe: "Legend of Zelda",
+        weight: 'light'
       },
 ]
 
