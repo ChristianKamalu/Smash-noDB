@@ -8,7 +8,7 @@ body {
 
 .character-container {
     width: 30rem;
-    background-color: rgba(255, 255, 255, 0.651);
+    background-color: rgba(255, 255, 255, 0.842);
     border: 1px solid black;
     display: flex;
     flex-direction: column;
@@ -61,7 +61,7 @@ body {
 
 .stats-view-box {
     background-color: rgba(225, 225, 225, 0.5);
-    border-radius: 5rem;
+    border-radius: 3rem;
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -1,4 +1,4 @@
-let id = 15;
+let id = 17;
 let characters = [
     {
         id: 2,
@@ -120,6 +120,14 @@ let characters = [
         universe: "Donkey Kong Land",
         weight: 'super heavy'
       },
+      {
+        id: 17,
+        image_path: "https://www.ssbwiki.com/images/thumb/0/08/Lucario_SSBU.png/250px-Lucario_SSBU.png",
+        moves: ["Aura Sphere, Force Palm, Extreme Speed, Double Team"],
+        name: "Lucario",
+        universe: "Pokemon",
+        weight: 'medium'
+      },
 ]
 
 module.exports = {
@@ -150,18 +158,18 @@ module.exports = {
         id: id,
         name: 'Dwayne "The Rock" Johnson',
         image_path: "http://atlantablackstar.com/wp-content/uploads/2015/06/The-Rock-4.png",
-        moves: "Destroy, Smolder",
-        universe: "Titan Games",
-        weight: 'Super Heavy'
+        moves: moves ? moves : "Destroy, Smolder",
+        universe: universe ? universe : "Titan Games",
+        weight: weight ? weight : 'Super Heavy'
       }
       ) : (
       {
-        id: id,
-        image_path: image_path,
-        moves: moves,
-        name: name,
-        universe: universe,
-        weight: weight
+        id,
+        image_path,
+        moves,
+        name,
+        universe,
+        weight
       })
       characters.push(newCharacter);
       res.send(characters)
@@ -174,7 +182,7 @@ module.exports = {
       character.push(characters[index])
 
       let updatedCharacter = {
-        id: id,
+        id,
         image_path: image_path ? image_path : character.image_path,
         moves: moves ? moves : character.moves,
         name: name ? name : character.name,
