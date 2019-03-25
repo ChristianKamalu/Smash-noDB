@@ -48,8 +48,8 @@ class AllChar extends Component {
         return !this.state.create ? (
             <div className={'character-view'}>
                 <button className={'create-button'} onClick={this.toggleCreate}><h3>CREATE CHARACTER</h3></button>
-                <input className={'search-bar'} placeholder={'SEARCH'} onChange={e => this.props.searchCharacters(e.target.value)}/>
-                <img className={'All-Characters-Header'} src={'https://fontmeme.com/permalink/190322/5e0c3ba9f725e06348fec118fab97f4c.png'} alt='header'/>
+                <input className={'search-bar'} placeholder={'SEARCH CHARACTERS'} onChange={e => this.props.searchCharacters(e.target.value)}/>
+                <img className={'All-Characters-Header'} src={'https://fontmeme.com/permalink/190325/a68b25ee2d4b3f78b4c29d94c29a66d7.png'} alt='header'/>
                 <div className={'character-view'}>
                     {this.props.characters.map((character) => {
                         return <Char key={character.id} character={character} toggleView={this.props.toggleView}/>
@@ -59,8 +59,7 @@ class AllChar extends Component {
             </div>
         ) : (
             <div className={'character-view'}>
-                <button className={'create-button'} onClick={this.toggleCreate}><h3>CREATE CHARACTER</h3></button>
-                <img className={'All-Characters-Header'} src={'https://fontmeme.com/permalink/190322/5e0c3ba9f725e06348fec118fab97f4c.png'} alt='header'/>
+                <img className={'All-Characters-Header'} src={'https://fontmeme.com/permalink/190325/a68b25ee2d4b3f78b4c29d94c29a66d7.png'} alt='header'/>
                 <div className={'character-view'}>
                     {this.props.characters.map((character) => {
                         return <Char key={character.id} character={character} toggleView={this.props.toggleView}/>
@@ -71,8 +70,9 @@ class AllChar extends Component {
                     <input className={'update-content'} type='text' name='image_path' placeholder='image' onChange={e => this.handleChange(e.target)}/>
                     <input className={'update-content'} type='text' name='universe' placeholder='universe' onChange={e => this.handleChange(e.target)}/>
                     <input className={'update-content'} type='text' name='moves' placeholder='moves' onChange={e => this.handleChange(e.target)}/>
-                    <input className={'update-content'} type='number' name='weight' placeholder='weight' onChange={e => this.handleChange(e.target)}/>
+                    <input className={'update-content'} type='text' name='weight' placeholder='weight' onChange={e => this.handleChange(e.target)}/>
                     <button className={'update-button'} onClick={this.handleCreateClick}>CREATE</button>
+                    <button className={'exit-button'} onClick={this.toggleCreate}>X</button>
                 </div>
             </div>
         )

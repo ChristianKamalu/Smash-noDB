@@ -50,7 +50,7 @@ class SpecificChar extends Component {
     render() {
         return this.state.edit ? (
             <div className={'specific-view'}>
-                <button className={'back-button'} onClick={this.props.toggleView}><img src={'https://cdn2.iconfinder.com/data/icons/arrows-1-2/416/Arrow_Left3-512.png'} alt='left arrow' width='30'/></button>
+                <button className={'back-button'} onClick={this.handleUpdateClick}><img src={'https://cdn2.iconfinder.com/data/icons/arrows-1-2/416/Arrow_Left3-512.png'} alt='left arrow' width='30'/></button>
                 <button className={'edit-button'} onClick={this.toggleEdit}>EDIT</button>
                 <h1 className={'name'}>{this.props.specificChar.name}</h1>
                 <img src={this.props.specificChar.image_path} alt={this.props.specificChar.name} width={'300'} style={{ marginBottom: '3rem'}}/>
@@ -62,9 +62,8 @@ class SpecificChar extends Component {
             </div>
         ) : (
             <div className={'specific-view'}>
-                <button className={'back-button'} onClick={this.props.toggleView}><img src={'https://cdn2.iconfinder.com/data/icons/arrows-1-2/416/Arrow_Left3-512.png'} alt='left arrow' width='30'/></button>
-                <button className={'edit-button'} onClick={this.toggleEdit}>EDIT</button>
-                <h1>{this.props.specificChar.name}</h1>
+                <button className={'back-button'} onClick={this.handleUpdateClick}><img src={'https://cdn2.iconfinder.com/data/icons/arrows-1-2/416/Arrow_Left3-512.png'} alt='left arrow' width='30'/></button>
+                <h1 className={'name'}>{this.props.specificChar.name}</h1>
                 <img src={this.props.specificChar.image_path} alt={this.props.specificChar.name} width={'300'} style={{ marginBottom: '3rem'}}/>
                 <div className={'stats-view-box'}>
                     <h2>{`Universe: ${this.props.specificChar.universe}`}</h2>
@@ -77,7 +76,8 @@ class SpecificChar extends Component {
                     <input className={'update-content'} type='text' name='image_path' placeholder='image' onChange={e => this.handleChange(e.target)}/>
                     <input className={'update-content'} type='text' name='universe' placeholder='universe' onChange={e => this.handleChange(e.target)}/>
                     <input className={'update-content'} type='text' name='moves' placeholder='moves' onChange={e => this.handleChange(e.target)}/>
-                    <input className={'update-content'} type='number' name='weight' placeholder='weight' onChange={e => this.handleChange(e.target)}/>
+                    <input className={'update-content'} type='text' name='weight' placeholder='weight' onChange={e => this.handleChange(e.target)}/>
+                    <button className={'exit-button'} onClick={this.toggleEdit}>X</button>
                     <button className={'update-button'} onClick={this.handleUpdateClick}>UPDATE CHARACTER</button>
                     <button className={'delete-button'} onClick={this.handleDeleteClick}>DELETE CHARACTER</button>
                 </div>

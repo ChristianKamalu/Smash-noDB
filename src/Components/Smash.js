@@ -23,7 +23,8 @@ class Smash extends Component {
     }
 
     searchCharacters = (input) => {
-        axios.get(`/api/SmashChars/?search=${input}`)
+        console.log(input)
+        axios.get(`/api/SmashChars/${input}`)
             .then(res => {
                 this.setState({
                     characters: res.data
